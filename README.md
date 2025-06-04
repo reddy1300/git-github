@@ -177,3 +177,70 @@ We can also chain multiple folder name to see files present in that sub folder
   To auto-complete the folder name by entering partial name when file name is lengthy we can use `Tab`.
 
 - `cd ..` - Change Directory(Backword one level)
+
+- `touch` : To create a new file or multiple files.
+  `touch vegetables.txt`
+  `touch car.py images.txt`
+
+  To create a file inside any folder use command `touch Pets/Horses/rocky.txt`
+
+`mkdir` - To create new folders or Directory.
+`mkdir Plants`
+To create two directories/folders with single action use `mkdir fruits vegetables`
+
+Deleting Files & Folders:
+To delete / remove files we have to use command `rm`
+`rm cars.py`
+`rm fruits.txt vegetables.txt`
+We use rm to delete files. but with variation of rm we can also remove/delete folders/directories.
+`rm -rf Plants` this command recurssively deletes files/directories.
+
+**What is a GIT Repo?**
+
+Repository:
+A GIT repo is a workspace which tracks and manages files within a folder.
+
+Anytime we want to use GIT with a project, app, etc we need to create a new git repository. We can have as many repos on
+our machine as needed, all with separate histories and contents.
+
+`git log' to see history of a repo.
+
+`git status` gives information on the current status of a git repository and its contents.
+
+It's very useful, but at the moment we don't actually have any repos to check the status of!
+
+`git init` - we can use this command to create a new git repository. Before we can do anything git-related, we must initialize a repo first.
+
+This is something you do once per project. Initialize the repo in the top-level folder containing your project.
+
+Note: Before initializing a repo in any project folder/directory please make sure to check whether that project file is
+already initialized with git by using `git status` command.
+
+**Committing:**
+Work On Stuff: Make new files, edit files, delete files, etc.
+Add Changes: Group specific changes together, in preparation of committing.
+Commit: Commit everything that was previously added.
+
+**GIT Adding:**
+Working Directory -> git add -> Staging Area -> git commit -> Repository
+`git add file1 file2 file3`
+
+**GIT Commit:**
+We use the git commit command to actually commit changes form the staging area.
+
+When making a commit, we need to provide a commit message that summarizes the changes and work snapshotted in the commit.
+`git commit` Running git commit will commit all staged changes. It also opens up a text editor and prompts you for a commit
+message.
+
+`git commit` with -m flag allows us to pass in an inline commit message, rather than launching a text editor.
+`git commit -m "My Message"`
+
+`git log` - Retrieve information for us is a log of the commits for a given repository.
+Note: To stage all changes at once use command ` git add .`
+
+**Atomic Commits:**
+When possible, a commit should encompass a single feature, change, or fix. In other words, try to keep each commit focused on a single thing.
+
+This makes it much easier to undo or rollback changes later on. It also makes your code or project easier to review.
+
+To see nice way to look at history use command `git log --oneline`
